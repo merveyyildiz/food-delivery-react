@@ -1,0 +1,75 @@
+@import "./variable.scss";
+
+.footer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: $color-orange-light;
+    &__title {
+        font-size: 1.1rem;
+        color: $color-black;
+        font-weight: 600;
+    }
+    .logo {
+        img {
+            width: calc(100% - 80%);
+            margin-bottom: 5px;
+        }
+        h5 {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            margin-top: 0px;
+        }
+        p {
+            font-size: .9rem;
+            color: $color-gray;
+            line-height: 28px;
+        }
+    }
+
+    .delivery {
+        &__time-item {
+            background-color: transparent;
+            color: $color-black;
+            span {
+                font-weight: 600;
+                font-size: 1rem;
+            }
+        } 
+    }
+    .newsletter {
+        padding: 5px;
+        border: 1px solid $color-black;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            background: transparent;
+            outline: none;
+            border: none;
+            &::placeholder {
+                color: $color-black;
+            }
+        }
+        span {
+            background-color: $color-orange;
+            color: $color-white;
+            border-radius: 5px;
+            padding: 5px 30px;
+            cursor: pointer;
+        }
+    }
+    .social__links {
+        i {
+            padding: 5px;
+            background-color: $color-orange;
+            color: $color-white;
+            border-radius: 50%;
+        }
+    }
+    .copyright {
+        color: $color-gray;
+        font-size: .8rem;
+    }
+}

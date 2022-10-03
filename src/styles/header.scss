@@ -1,3 +1,4 @@
+@import "./variable.scss";
 
 .header {
     width: 100%;
@@ -6,74 +7,74 @@
     position: sticky;
     top: 0;
     left: 0;
-    background-color: #fcfcfc;
-}
+    background-color: $color-light;
+    .logo {
+        text-align: center;
+        img {
+            width: calc(100% - 60%);
+            object-fit: contain;
+        }
+        h5 {
+           font-weight: 600;
+           font-size: 1rem;
+           color: $color-black;
+           margin-top: -10px;
+           margin-bottom: 0;
+        }
+    }
 
-.logo {
-    text-align: center;
-    img {
-        width: calc(100% - 60%);
-        object-fit: contain;
-    }
-    h5 {
-       font-weight: 600;
-       font-size: 1rem;
-       color: #212245;
-       margin-top: -10px;
-       margin-bottom: 0;
-    }
-}
-.navigation {
-    .menu {
-        a {
-            font-weight: 600;
-            font-style: 1rem;
-            color: #212245;
-            transition: color 300ms;
-            &:hover {
-                color: #df2020;
+    .navigation {
+        .menu {
+            a {
+                font-weight: 600;
+                font-style: 1rem;
+                color: $color-black;
+                transition: color 300ms;
+                &:hover {
+                    color: $color-orange;
+                }
+            }
+            .active {
+                color: $color-orange;
             }
         }
-        .active {
-            color: #df2020;
+        .close-icon {
+            display: none;
         }
     }
-    .close-icon {
+
+
+    .cart__icon i, .user i, .mobile__menu i {
+        font-size: 1.3rem;
+        color: $color-black;
+        cursor: pointer;
+    }
+
+    .cart {
+        &__icon {
+            position: relative;
+        }
+        &__badge {
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            padding-top: 3px;
+            background-color: $color-orange;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            font-size: .8rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .mobile__menu {
+        font-weight: 600;
         display: none;
     }
-}
-
-
-.cart__icon i, .user i, .mobile__menu i {
-    font-size: 1.3rem;
-    color: #212245;
-    cursor: pointer;
-}
-
-.cart {
-    &__icon {
-        position: relative;
-    }
-    &__badge {
-        position: absolute;
-        top: 20px;
-        right: -10px;
-        padding-top: 3px;
-        background-color: #df2020;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        font-size: .8rem;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-.mobile__menu {
-    font-weight: 600;
-    display: none;
 }
 
 @media only screen and (max-width: 992px) {
@@ -103,7 +104,7 @@
             right: 0;
             width: 250px;
             height: 100%;
-            background-color: #fff;
+            background-color: $color-white;
             flex-direction: column;
             justify-content: center;
             align-items: center;
