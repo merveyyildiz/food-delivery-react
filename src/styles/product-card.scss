@@ -1,0 +1,38 @@
+@import "./variable.scss";
+
+.product {
+    &__item {
+        border: 2px solid $color-light-2;
+        a {
+            color: $color-black;
+        }
+    }
+    &__img {
+        cursor: pointer;
+        text-align: center;
+        img {
+            width: 100%;
+            transition: 300ms;
+            &:hover {
+                scale:calc(1.2);
+            }
+        }
+    }
+    &__content {
+        font-size: .8rem;
+    }
+    &__price {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $color-orange;
+    }
+ 
+}
+.addToCard__btn {
+    border: none;
+    background-color: $color-orange;
+    color: $color-white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: .9rem;
+}
