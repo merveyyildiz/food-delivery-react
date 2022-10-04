@@ -64,3 +64,23 @@
         }
     }
 }
+.feature {
+    &__title {
+        color: $color-black;
+        span {
+            color: $color-orange;
+        }
+    }
+    &__subtitle {
+        color: $color-orange;
+    }
+    &__text {
+        color: $color-gray-light;
+    }
+    &__item {
+        p {
+            color: $color-gray-light;
+            font-size: .9rem;
+        }
+    }
+}
