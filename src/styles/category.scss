@@ -1,0 +1,14 @@
+@import "./variable.scss";
+
+.category {
+    &__item {
+        background: $color-orange-light;
+        padding: 30px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 300ms;
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}

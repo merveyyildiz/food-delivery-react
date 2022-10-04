@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
 import { Container, Row, Col } from "reactstrap";
 import heroImg from "../assets/images/hero.png";
+import Category from "../components/UI/category/Category";
 import "../styles/home.scss";
 
 const Home = () => {
@@ -41,6 +42,10 @@ const Home = () => {
                         </Col>
                     </Row>
                 </Container>
+            </section>
+
+            <section className="pt-0">
+                <Category />
             </section>
         </Helmet>
     )
