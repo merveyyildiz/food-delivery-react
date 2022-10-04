@@ -1,0 +1,66 @@
+@import "./variable.scss";
+
+.hero {
+    &__title {
+        font-size: 2.5rem;
+        line-height: 55px;
+        span {
+            color: $color-orange;
+        }
+    }
+    &__content {
+        p {
+            font-size: 1rem;
+            color: $color-gray-light;
+            line-height: 30px;
+        }
+    }
+    &__btns {
+        button {
+            border:none;
+        }
+        .order__btn {
+            background-color: $color-orange;
+            color: $color-white;
+            padding: 7px 14px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 300ms;
+            &:hover {
+                background-color: $color-black;
+            }
+        }
+        .all__foods {
+            border: 1px solid $color-orange;
+            background-color: transparent;
+            color: $color-orange;
+            padding: 7px 14px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 300ms;
+            &:hover {
+                border-color: $color-black;
+                a {
+                    color: $color-black;
+                }
+            }
+            a {
+                color: $color-orange;
+            }
+        }
+    }
+    &__service {
+        p {
+            color: $color-black;
+            font-weight: 600;
+            font-size: .9rem;
+        }
+        .shipping__icon i{
+            padding: 5px;
+            background-color: $color-orange;
+            border-radius: 50%;
+            color: $color-white;
+            font-weight: 500;
+        }
+    }
+}
