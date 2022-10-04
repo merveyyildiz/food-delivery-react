@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
 import { Container, Row, Col } from "reactstrap";
@@ -33,6 +33,27 @@ const featureData = [
 ]
 
 const Home = () => {
+    const [category, setCategory]= useState("ALL");
+    const [allProducts, setAllProducts] = useState(products);
+
+    useEffect(() => {
+        if(category === "ALL") {
+            setAllProducts(products);
+        }
+        else if(category === "BURGER") {
+            const filteredProducts = products.filter(item => item.category === "Burger");
+            setAllProducts(filteredProducts); 
+        }
+        else if(category === "PIZZA") {
+            const filteredProducts = products.filter(item => item.category === "Pizza");
+            setAllProducts(filteredProducts); 
+        }
+        else if(category === "BREAD") {
+            const filteredProducts = products.filter(item => item.category === "Bread");
+            setAllProducts(filteredProducts); 
+        }
+    }, [category])
+
     return (
         <Helmet title="Home">
             <section>
@@ -109,15 +130,15 @@ const Home = () => {
                         </Col>
                         <Col lg="12" className="mt-4 mb-3">
                             <div className="food__category d-flex justify-content-center align-items-center gap-5">
-                                <button className="all__btn foodBtnActive">All</button>
-                                <button><img src={foodCategoryImg01} alt="foodcategory" />Burger</button>
-                                <button><img src={foodCategoryImg02} alt="foodcategory" />Pizza</button>
-                                <button><img src={foodCategoryImg03} alt="foodcategory" />Bread</button>
+                                <button className={`${category === "ALL" ? "foodBtnActive": ""} `} onClick={() => setCategory("ALL")}>All</button>
+                                <button className={`${category === "BURGER" ? "foodBtnActive": ""} `} onClick={() => setCategory("BURGER")}><img src={foodCategoryImg01} alt="foodcategory" />Burger</button>
+                                <button className={`${category === "PIZZA" ? "foodBtnActive": ""} `} onClick={() => setCategory("PIZZA")}><img src={foodCategoryImg02} alt="foodcategory" />Pizza</button>
+                                <button className={`${category === "BREAD" ? "foodBtnActive": ""} `} onClick={() => setCategory("BREAD")}><img src={foodCategoryImg03} alt="foodcategory" />Bread</button>
                             </div>
                         </Col>
 
                         {
-                            products.map(item => (
+                            allProducts.map(item => (
                                 <Col lg="3" md="4" key={item.id}>
                                     <ProductCard item={item}/>
                                 </Col>
