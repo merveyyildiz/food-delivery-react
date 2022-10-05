@@ -131,3 +131,17 @@
     }
 
 }
+.testimonial {
+    &__subtitle {
+        color: $color-orange;
+    }
+    &__title {
+        span {
+            color: $color-orange;
+        }
+    }
+    &__desc {
+        color: $color-gray-light;
+        line-height: 30px;
+    }
+}
