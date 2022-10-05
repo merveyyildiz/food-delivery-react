@@ -31,7 +31,7 @@ const Category = () => {
             <Row>
                 {
                     catergoryDate.map((item, index) => (
-                        <Col lg="3" md="4" key={index}>
+                        <Col lg="3" md="4" sm="6" xs="6" key={index} className="mb-4">
                             <div className="category__item d-flex align-items-center gap-3 justify-content-center">
                                 <img src={item.imgUrl} alt="category__item" />
                                 <h6>{item.display}</h6>

@@ -116,14 +116,14 @@
             }
         }
         .close-icon {
-            display: block;
+            display: block !important;
             cursor: pointer;
         }
     }
 
 
     .mobile__menu {
-        display: block;
+        display: block !important;
     }
     .cart__icon i, .user i, .mobile__menu i {
         font-size: 1rem;

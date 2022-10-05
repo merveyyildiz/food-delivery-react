@@ -121,7 +121,7 @@ const Home = () => {
 
                         {
                             featureData.map((item, index) => (
-                                <Col lg="4" md="4" key={index} className="mt-5">
+                                <Col lg="4" md="6" sm="6" key={index} className="mt-5">
                                     <div className="feature__item d-flex flex-column px-4 py-3 justify-content-center align-items-center">
                                         <img src={item.imgUrl} alt="feature-img" className="w-25 mb-3"/>
                                         <h5 className="fw-bold mb-3">{item.title}</h5>
@@ -152,7 +152,7 @@ const Home = () => {
 
                         {
                             allProducts.map(item => (
-                                <Col lg="3" md="4" key={item.id}>
+                                <Col lg="3" md="4" sm="6" xs="6" key={item.id}>
                                     <ProductCard item={item}/>
                                 </Col>
                             ))
@@ -162,7 +162,7 @@ const Home = () => {
                 </Container>
             </section>
 
-            <section>
+            <section className="why">
                   <Container>
                     <Row>
                         <Col lg="6">

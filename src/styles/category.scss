@@ -12,3 +12,17 @@
         }
     }
 }
+@media only screen and (max-width:768px) {
+    .category{
+        &__img img{
+            width: 40px;
+            height: 40px;
+        }
+        &__item {
+            padding: 20px 15px;
+            h6 {
+                font-size: .8rem;
+            }
+        }
+    }
+}

@@ -145,3 +145,97 @@
         line-height: 30px;
     }
 }
+@media only screen and (max-width:768px) {
+    .hero {
+        &__content {
+            h5 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: .8rem;
+                line-height: 25px;
+            }
+        }
+        &__title {
+            font-size: 1.5rem;
+            line-height: 40px;
+        }
+        &__btns {
+            button {
+                padding: 5px 15px;
+                font-size: .7rem;
+            }
+        }
+        &__service p {
+            font-size: .7rem;
+        }
+    }
+    .feature {
+        &__item {
+            h5 {
+                font-size: .9rem;
+            }
+            p {
+                font-size: .8rem;
+            }
+        }
+        &__subtitle {
+            font-size: 1rem;
+        }
+        &__text {
+            font-size: .8rem;
+            margin-bottom: 0px;
+        }
+    }
+
+    .food {
+        &__category {
+            button {
+                padding: 5px 15px;
+            }
+        }
+    }
+    .why {
+        &__tasty-desc {
+            font-size: .8rem;
+            margin-bottom: 0px;
+        }
+        &__list-title {
+            font-size: .8rem;
+        }
+        &__list-des {
+            font-size: .7rem;
+        }
+    }
+    .testimonial {
+        &__subtitle {
+            font-size: 1rem;
+        }
+        &__desc {
+            font-size: .8rem;
+        }
+    }
+}
+@media only screen and (max-width:576px) {
+    .hero {
+        &__content {
+            text-align: center;
+        }
+        &__btns {
+            justify-content: center;
+        }
+        &__service {
+            justify-content: center;
+        }
+    }
+    .food {
+        &__category {
+            button {
+                padding: 5px 10px;
+            }
+        }
+    }
+    .why {
+        padding-top: 0px;
+    }
+}
