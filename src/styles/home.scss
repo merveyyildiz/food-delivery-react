@@ -108,3 +108,26 @@
         }
     }
 }
+.why {
+    &__tasty-title {
+        color: $color-black;
+        span {
+            color: $color-orange;
+        }
+    }
+    &__tasty-desc {
+        color: $color-gray-light;
+    }
+    &__list-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+        i {
+            color: $color-orange;
+            font-weight: 500;
+        }
+    }
+    &__list-desc {
+        color: $color-gray-light;
+    }
+
+}
