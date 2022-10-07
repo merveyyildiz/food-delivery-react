@@ -1,0 +1,39 @@
+@import "./variable.scss";
+
+.cart {
+    &__item {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $color-orange-light;
+    }
+    &__item-info {
+        img {
+            height: 35px;
+            width: 35px;
+            object-fit: cover;
+        }
+    }
+    &__product-title {
+        font-size: .8rem;
+        font-weight: 800;
+    }
+    &__product-price {
+        font-size: .8rem;
+        span {
+            font-size: .9rem;
+            font-weight: 600;
+            color: $color-orange;
+        }
+    }
+    &__item-btns {
+        background-color: $color-orange-light;
+        padding: 2px 5px;
+        border-radius: 5px;
+    }
+    &__decrease-btn, &__increase-btn {
+        cursor: pointer;
+    }
+    &__delete-btn {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+}

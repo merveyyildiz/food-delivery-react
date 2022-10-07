@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { Container } from "reactstrap";
 import logo from "../../assets/images/res-logo.png";
 import { NavLink, Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { cartUiActions } from "../../store/shopping-card/cartUiSlice";
 import "../../styles/header.scss";
 
 const nav_links = [
@@ -26,7 +28,14 @@ const nav_links = [
 const Header = () => {
 
     const menuRef= useRef(null);
+    const totalQuantity = useSelector(state => state.cart.totalQuantity);
+    const dispatch = useDispatch();
+
     const toggleMenu = () => menuRef.current.classList.toggle("show_menu");
+
+    const toggleCart = () => {
+        dispatch(cartUiActions.toggle());
+    }
 
     return (
         <header className="header">
@@ -59,9 +68,9 @@ const Header = () => {
 
                     {/** nav riht icons */}
                     <div className="nav__right d-flex align-items-center gap-4">
-                        <span className="cart__icon">
+                        <span className="cart__icon" onClick={toggleCart}>
                             <i className="ri-shopping-basket-line"></i>
-                            <span className="cart__badge">2</span>
+                            <span className="cart__badge">{totalQuantity}</span>
                         </span>
 
                         <span className="user">
