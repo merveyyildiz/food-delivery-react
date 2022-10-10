@@ -1,0 +1,14 @@
+@import "./variable.scss";
+
+.search__widget, .sorting__widget select {
+    padding: 7px;
+    border: 1px solid $color-orange-light;
+    border-radius: 5px;
+    cursor: pointer;
+    input {
+        border:none;
+        &:focus {
+            outline: none;
+        }
+    }
+}
