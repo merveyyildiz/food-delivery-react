@@ -1,6 +1,7 @@
 @import "./variable.scss";
 
 .search__widget, .sorting__widget select {
+    width: 50%;
     padding: 7px;
     border: 1px solid $color-orange-light;
     border-radius: 5px;
@@ -10,5 +11,21 @@
         &:focus {
             outline: none;
         }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .search__widget, input {
+        width: 100% !important;
+    }
+    .sorting__widget select {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width:576px) {
+
+    .search__widget, .sorting__widget select {
+        margin-top: 10px;
     }
 }

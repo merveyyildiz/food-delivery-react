@@ -17,7 +17,7 @@ const ProductCard = (props) => {
         }))
     }
     return (
-        <div className="product__item p-4 d-flex flex-column mt-4">
+        <div className="product__item d-flex flex-column mt-4">
             <div className="product__img mb-2">
                 <img src={image01} alt="product-img " className="w-50"/>
             </div>

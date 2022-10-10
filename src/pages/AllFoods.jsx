@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import { Container, Row, Col } from "reactstrap";
 import ReactPaginate from "react-paginate";
 import Helmet from "../components/Helmet/Helmet";
@@ -36,16 +36,16 @@ const AllFoods = () => {
             <section>
                 <Container>
                     <Row>
-                        <Col lg="6" md="6" sm="6">
-                            <div className="search__widget d-flex justify-content-between align-items-center w-50">
+                        <Col lg="6" md="6" sm="12" xs="12">
+                            <div className="search__widget d-flex justify-content-between align-items-center">
                                 <input type="text" placeholder="I'm looking for" value={searchText} onChange={e => {setSearchText(e.target.value); setPageNumber(0)}} />
                                 <span><i className="ri-search-line"></i></span>
                             </div>
                         </Col>
 
-                        <Col lg="6" md="6" sm="6">
+                        <Col lg="6" md="6" sm="12" xs="12">
                             <div className="sorting__widget text-end">
-                              <select className="w-50">
+                              <select >
                                 <option>Default</option>
                                 <option value="ascending">Alphabetically, A-Z</option>
                                 <option value="descending">Alphabetically, Z-A</option>
