@@ -57,8 +57,8 @@ const AllFoods = () => {
 
                         {
                             displayPage.map(product=> (
-                                <Col lg="3" md="4" sm="6" xs="6">
-                                    <ProductCart item={product} key={product.id}/>
+                                <Col lg="3" md="4" sm="6" xs="6" key={product.id}>
+                                    <ProductCart item={product} />
                                 </Col>
                             ))
                         }
