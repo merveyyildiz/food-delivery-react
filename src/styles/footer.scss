@@ -4,6 +4,7 @@
     padding-top: 50px;
     padding-bottom: 30px;
     background-color: $color-orange-light;
+    flex-shrink: 0;
     &__title {
         font-size: 1.1rem;
         color: $color-black;

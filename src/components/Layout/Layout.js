@@ -8,10 +8,10 @@ const Layout = () => {
     const showCart = useSelector((state)=> state.cartUi.cartIsVisible);
 
     return (
-        <div>
+        <div className="d-flex flex-column h-100">
             <Header />
             { showCart &&  <Carts /> }
-            <div>
+            <div className="flex-fill">
                 <Routers />
             </div>
             <Footer />
