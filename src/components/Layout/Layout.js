@@ -11,7 +11,7 @@ const Layout = () => {
         <div className="d-flex flex-column h-100">
             <Header />
             { showCart &&  <Carts /> }
-            <div className="flex-fill">
+            <div className="flex-fill"style={{ marginTop: 100 }}>
                 <Routers />
             </div>
             <Footer />
