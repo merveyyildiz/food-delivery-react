@@ -1,0 +1,14 @@
+@import "./variable.scss";
+
+.login {
+    &__form {
+        background-color: $color-orange-light;
+        padding: 30px 20px;
+    }
+    &__link {
+        display: block;
+        margin-top: 20px;
+        font-size: .9rem;
+        color: $color-gray;
+    }
+}
