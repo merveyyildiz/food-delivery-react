@@ -1,0 +1,28 @@
+@import "./variable.scss";
+
+.checkout {
+    &__bill {
+        background-color: $color-orange-light;
+        padding: 15px;
+    }
+    &__bill-item, &__bill-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__bill-total {
+        padding-top: 10px;
+        border-top: 1px solid $color-gray-light;
+    }
+    textarea {
+        resize: none;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .checkout{
+        &__bill {
+            margin-top: 20px;
+        }
+    }
+}
