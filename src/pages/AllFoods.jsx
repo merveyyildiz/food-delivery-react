@@ -18,6 +18,7 @@ const AllFoods = () => {
         if(item.title.toLowerCase().includes(searchText.toLowerCase())) {
             return item;
         }
+        return false;
     });
 
     const productPerPage = 8;

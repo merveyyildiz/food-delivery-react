@@ -14,9 +14,7 @@ import "../styles/product-detail.scss";
 const FoodDetails = () => {
 
     const [tab, setTab] = useState("desc");
-    const [enteredName, setEnteredName] = useState("");
-    const [enteredEmail, setEnteredEmail] = useState("");
-    const [enteredReviewMsg, setEnteredReviewMsg] = useState("");
+    const [formValue, setFormValue] = useState({});
 
     const { id } = useParams();
     const dispatch = useDispatch();
@@ -28,6 +26,7 @@ const FoodDetails = () => {
         if(item.category === product.category && item.id !== product.id) {
             return item;
         };
+        return false;
     })
 
     const addCart = () => {
@@ -36,6 +35,10 @@ const FoodDetails = () => {
 
     const submitHandle = (e) => {
         e.preventDefault();
+    }
+
+    const handleChange = (e) => {
+        setFormValue({...formValue, [e.target.name]: e.target.value});
     }
 
     useEffect(()=> {
@@ -53,13 +56,13 @@ const FoodDetails = () => {
                         <Col lg="2" md="2">
                             <div className="images">
                                 <div className="images__item">
-                                 <a onClick={() => setPreviewImg(product.image01)}><img src={product.image01} alt=""  className="w-50"/></a> 
+                                 <span onClick={() => setPreviewImg(product.image01)}><img src={product.image01} alt=""  className="w-50"/></span> 
                                 </div>
                                 <div className="images__item my-2" >
-                                <a onClick={() => setPreviewImg(product.image02)}><img src={product.image02} alt=""  className="w-50"/></a>
+                                <span  onClick={() => setPreviewImg(product.image02)}><img src={product.image02} alt=""  className="w-50"/></span>
                                 </div>
                                 <div className="images__item">
-                                <a onClick={() => setPreviewImg(product.image03)}><img src={product.image03} alt=""  className="w-50"/> </a>
+                                <span  onClick={() => setPreviewImg(product.image03)}><img src={product.image03} alt=""  className="w-50"/> </span>
                                 </div>
                             </div>
                         </Col>
@@ -113,13 +116,13 @@ const FoodDetails = () => {
 
                                 <form className="form" onSubmit={submitHandle}>
                                     <div className="form__group">
-                                        <input type="text" placeholder="Enter your name" onChange={e => setEnteredName(e.target.value)} required/>
+                                        <input type="text" placeholder="Enter your name" name="name" onChange={(e =>handleChange(e))} required/>
                                     </div>
                                     <div className="form__group">
-                                        <input type="text" placeholder="Enter your name" onChange={e => setEnteredEmail(e.target.value)} required/>
+                                        <input type="email" placeholder="Enter your email" name="email" onChange={(e =>handleChange(e))} required/>
                                     </div>
                                     <div className="form__group">
-                                        <textarea type="text" rows="5" placeholder="Enter your name" onChange={e => setEnteredReviewMsg(e.target.value)} required/>
+                                        <textarea type="text" rows="5" placeholder="Enter your message" name="message" onChange={(e =>handleChange(e))} required/>
                                     </div>
 
                                     <button className="addToCard__btn">Submit</button>
