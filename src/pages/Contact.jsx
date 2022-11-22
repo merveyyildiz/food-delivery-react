@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <Helmet title="Contact">
             <CommonSection title="Contact" />
-            <div className="d-flex align-items-center justify-content-center flex-column mt-5">
+            <div className="d-flex align-items-center justify-content-center flex-column my-5">
                 <h5>Phone: 0262 123 45 56</h5>
                 <h5>Address: Kocaeli/Darıca</h5>
             </div>

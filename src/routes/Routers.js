@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route, Navigate } from "react-router-dom";
+import React, {useEffect} from 'react'
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Home from "../pages/Home";
 import AllFoods from "../pages/AllFoods";
 import FoodDetails from "../pages/FoodDetails";
@@ -11,7 +11,9 @@ import Register from "../pages/Register";
 
 const Routers = () => {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
         <Route path="/" element={<Navigate to="/home/"/>} />
         <Route path="/home" element={<Home />} />
         <Route path="/foods" element={<AllFoods />} />
@@ -21,8 +23,19 @@ const Routers = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/contact" element={<Contact />} />
-    </Routes>
+      </Routes>
+    </>
   )
 }
 
 export default Routers;
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return ;
+}
